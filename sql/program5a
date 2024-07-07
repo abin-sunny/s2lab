@@ -1,0 +1,75 @@
+create table product5(p_id int primary key,p_name varchar(20),s_id int,c_id int,unit int,price number(10,2));
+
+insert into product5 values(&p_id,'&p_name',&s_id,&c_id,&unit,&price);
+
+select * from product5;
+
+      P_ID P_NAME		      S_ID	 C_ID	    UNIT      PRICE
+---------- -------------------- ---------- ---------- ---------- ----------
+	 1 chais			 1	    1	      10	 18
+	 2 chang			 1	    1	      24	 19
+	 3 Syrup			 1	    2	      12	 10
+	 4 Cajun			 2	    2	      48	 22
+	 5 cucumbo			 2	    2	      36      21.35
+
+a, select * from product5;
+
+      P_ID P_NAME		      S_ID	 C_ID	    UNIT      PRICE
+---------- -------------------- ---------- ---------- ---------- ----------
+	 1 chais			 1	    1	      10	 18
+	 2 chang			 1	    1	      24	 19
+	 3 Syrup			 1	    2	      12	 10
+	 4 Cajun			 2	    2	      48	 22
+	 5 cucumbo			 2	    2	      36      21.35
+
+SQL> select max(price),min(price) from product5 where s_id=2;
+
+MAX(PRICE) MIN(PRICE)
+---------- ----------
+	22	21.35
+	
+b, select count(*) from product5 where c_id=1;
+
+  COUNT(*)
+----------
+	 2
+	
+	
+	
+c,select count(*) from product5 where price>20;
+
+  COUNT(*)
+----------
+	 2
+	 
+d,select sum(price) from product5 where s_id=1;
+
+SUM(PRICE)
+----------
+	47
+
+e, select avg(price) from product5;
+
+AVG(PRICE)
+----------
+     18.07
+     
+f, select avg(price) from product5 where c_id=1;
+
+AVG(PRICE)
+----------
+      18.5
+      
+g,
+ select * from product5 where price>(select avg(price) from product5);
+
+      P_ID P_NAME		      S_ID	 C_ID	    UNIT      PRICE
+---------- -------------------- ---------- ---------- ---------- ----------
+	 2 chang			 1	    1	      24	 19
+	 4 Cajun			 2	    2	      48	 22
+	 5 cucumbo			 2	    2	      36      21.35
+
+
+
+
+

@@ -1,0 +1,15 @@
+a,
+create table Department(department_id int primary key,dept_name varchar(12),hod varchar(14));
+
+//error
+create table employee(e_id int primary key,name varchar(15),department_id int foreign key references Department(department_id),salary number(12,2));
+
+//working
+CREATE TABLE employee (
+    e_id INT PRIMARY KEY,
+    name VARCHAR(15),
+    department_id INT,
+    salary DECIMAL(12,2),
+    FOREIGN KEY (department_id) REFERENCES Department(department_id)
+);
+

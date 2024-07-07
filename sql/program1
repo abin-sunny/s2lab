@@ -1,0 +1,60 @@
+a,
+create table student4(Rollno int primary key,Name varchar(20) not null,course varchar(10),year int not null);
+
+desc student4;
+ ROLLNO NAME 		COURSE		 YEAR
+---------- -------------------- ---------- ----------
+	 1 ajai 		mca		 2023
+	 2 abin 		mca		 1998
+	 3 ajay das		mca		 2022
+
+
+
+insert into student4 values(&Rollno,'&Name','&course',&year);
+
+select * from student;
+
+ ROLLNO NAME 		COURSE		 YEAR
+---------- -------------------- ---------- ----------
+	 1 ajai 		mca		 2023
+	 2 abin 		mca		 1998
+	 3 ajay das		mca		 2022
+	 
+b,alter table student4 add(qualification varchar(5));
+ Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ROLLNO 				   NOT NULL NUMBER(38)
+ NAME					   NOT NULL VARCHAR2(20)
+ COURSE 					    VARCHAR2(10)
+ YEAR					   NOT NULL NUMBER(38)
+ QUALIFICATION					    VARCHAR2(5)
+
+
+
+alter table student4 modify(qualification varchar(8));
+
+ Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ROLLNO 				   NOT NULL NUMBER(38)
+ NAME					   NOT NULL VARCHAR2(20)
+ COURSE 					    VARCHAR2(10)
+ YEAR					   NOT NULL NUMBER(38)
+ QUALIFICATION					    VARCHAR2(8)
+
+alter table student4 rename column qualification to quali;
+ Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ROLLNO 				   NOT NULL NUMBER(38)
+ NAME					   NOT NULL VARCHAR2(20)
+ COURSE 					    VARCHAR2(10)
+ YEAR					   NOT NULL NUMBER(38)
+ QUALI						    VARCHAR2(8)
+
+alter table student4 rename to students;
+
+d,truncate table students;
+select * from students;
+truncate table students;
+
+c,drop table students;
+

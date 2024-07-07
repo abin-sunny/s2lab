@@ -1,0 +1,100 @@
+i,create table
+create table Boat(b_id int primary key,bname varchar(20),colour varchar(10));
+
+insert into Boat values(&b_id,'&bname','&colour');
+select * from Boat;
+
+      B_ID BNAME		COLOUR
+---------- -------------------- ----------
+       101 Interlake		blue
+       102 Interlake		red
+       103 Clipper		green
+       104 Marine		red
+
+
+//sailors table
+create table sailor(s_id int primary key,sname varchar(15),rating int,age int);
+
+insert into sailor values(&s_id,'&sname',&rating,&age);
+
+ select * from sailor;
+
+      S_ID SNAME	       RATING	     AGE
+---------- --------------- ---------- ----------
+	22 Dustin		    7	      45
+	29 Brutus		    1	      33
+	31 Lubber		    8	      55
+	32 Andy 		    8	      25
+	58 Rusty		   10	      35
+	64 Horatio		    7	      35
+	71 Zorba		   10	      16
+	74 Horatio		    9	      35
+	85 Art			    3	      25
+	95 Bob			    3	      63
+
+//reserve table
+
+create table reserve(s_id int,b_id int,day date,foreign key(s_id) references sailor(s_id),foreign key(b_id) references Boat(b_id),primary key(s_id,b_id));
+
+insert into reserve values(&s_id,&b_id,'&day');
+
+// insert into reserve values(22,101,'10-oct-98')
+
+ select * from reserve;
+
+      S_ID	 B_ID DAY
+---------- ---------- --------
+	22	  101 10-10-98
+	22	  102 10-10-98
+	22	  103 10-08-98
+	22	  104 10-07-98
+	31	  102 11-10-98
+	31	  103 11-06-98
+	31	  104 11-12-98
+	64	  101 09-05-98
+	64	  102 09-08-98
+	74	  103 09-08-98
+
+10 rows selected.
+
+2;
+
+3,select distinct sname from sailor;
+
+SNAME
+---------------
+Rusty
+Lubber
+Brutus
+Andy
+Art
+Bob
+Dustin
+Zorba
+Horatio
+
+9 rows selected.
+
+4,select * from sailor where s_id in(select s_id from reserve where b_id=101);
+
+      S_ID SNAME	       RATING	     AGE
+---------- --------------- ---------- ----------
+	22 Dustin		    7	      45
+	64 Horatio		    7	      35
+
+
+ select sailor.s_id,sailor.sname,sailor.rating,sailor.age from sailor left outer join reserve on sailor.s_id=reserve.s_id   where reserve.b_id=101;
+ 
+       S_ID SNAME	       RATING	     AGE
+---------- --------------- ---------- ----------
+	22 Dustin		    7	      45
+	64 Horatio		    7	      35
+	
+5,select  distinct sailor.s_id,sname from sailor inner join reserve on sailor.s_id=reserve.s_id;
+
+
+
+
+
+
+

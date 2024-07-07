@@ -1,0 +1,35 @@
+
+Dell PowerEdge R740:
+Description: The Dell PowerEdge R740 is a robust and versatile 2U rack server suitable for various workloads.
+Specifications:
+Processor: Dual Intel Xeon Scalable processors (up to 28 cores each).
+Memory: Up to 3TB DDR4 RAM.
+Storage: Supports up to 16 x 2.5" or 8 x 3.5" drives (HDD or SSD).
+Network: Dual 1GbE or optional 10GbE/25GbE/40GbE NICs.
+Expansion Slots: Up to 8 PCIe slots.
+Operating System: Compatible with Windows Server, Linux, and VMware.
+Management: Integrated iDRAC9 for remote management.
+Power Supply: Dual redundant power supplies.
+HPE ProLiant DL380 Gen10:
+Description: The HPE DL380 Gen10 is a popular 2U rack server known for its reliability and performance.
+Specifications:
+Processor: Dual Intel Xeon Scalable processors (up to 28 cores each).
+Memory: Up to 3TB DDR4 RAM.
+Storage: Supports up to 30 SFF or 20 LFF drives (HDD or SSD).
+Network: Dual 1GbE or optional 10GbE/25GbE/40GbE NICs.
+Expansion Slots: Up to 6 PCIe slots.
+Operating System: Compatible with Windows Server, Linux, and VMware.
+Management: Integrated iLO 5 for remote management.
+Power Supply: Dual redundant power supplies.
+Lenovo ThinkSystem SR650:
+Description: The ThinkSystem SR650 is a versatile 2U server suitable for data centers and virtualization.
+Specifications:
+Processor: Dual Intel Xeon Scalable processors (up to 28 cores each).
+Memory: Up to 3TB DDR4 RAM.
+Storage: Supports up to 24 SFF or 12 LFF drives (HDD or SSD).
+Network: Dual 1GbE or optional 10GbE/25GbE/40GbE NICs.
+Expansion Slots: Up to 7 PCIe slots.
+Operating System: Compatible with Windows Server, Linux, and VMware.
+Management: Integrated XClarity Controller for remote management.
+Power Supply: Dual redundant power supplies.
+Remember that these servers come in various configurations, and you can customize them further based on your specific requirements. Prices vary depending on the chosen components and features. If you prefer a more budget-friendly option, consider using cloud-based virtual servers or managed hosting services123.

@@ -1,0 +1,74 @@
+//create table
+create table customer(id int primary key,name varchar(20),address varchar(10),city varchar(10),country varchar(10),age number(3),salary number(12,2));
+//insert
+insert into customer values(&id,'&name','&address','&city','&country',&age,&salary);
+
+display
+select * from customer ;
+
+	ID NAME 	  ADDRESS    CITY	COUNTRY 	  AGE	  SALARY
+---------- -------------- ---------- ---------- ---------- ---------- ----------
+	 1 Ajaidev	  Ernakulam  cherai	India		   21	   20000
+	 2 Aravind	  kottayam   pala	India		   35	   75000
+	 3 Ebin Sunny	  Ernakulam  kochi	India		   34	   32300
+	 4 Manu 	  Kollam     varkala	India		   78	   99000
+	 5 Ajay Das M	  Palakad    vellinazhi India		   45	   34000
+
+a,select * from customer where name like 'A%';
+	ID NAME 	  ADDRESS    CITY	COUNTRY 	  AGE	  SALARY
+---------- -------------- ---------- ---------- ---------- ---------- ----------
+	 1 Ajaidev	  Ernakulam  cherai	India		   21	   20000
+	 2 Aravind	  kottayam   pala	India		   35	   75000
+	 5 Ajay Das M	  Palakad    vellinazhi India		   45	   34000
+
+b,select * from customer where name like '%ra%';
+	ID NAME 	  ADDRESS    CITY	COUNTRY 	  AGE	  SALARY
+---------- -------------- ---------- ---------- ---------- ---------- ----------
+	 2 Aravind	  kottayam   pala	India		   35	   75000
+
+c,select * from customer where city like '%i';
+	ID NAME 	  ADDRESS    CITY	COUNTRY 	  AGE	  SALARY
+---------- -------------- ---------- ---------- ---------- ---------- ----------
+	 1 Ajaidev	  Ernakulam  cherai	India		   21	   20000
+	 3 Ebin Sunny	  Ernakulam  kochi	India		   34	   32300
+	 5 Ajay Das M	  Palakad    vellinazhi India		   45	   34000
+
+d,select * from customer where age like '2_' ;
+	ID NAME 	  ADDRESS    CITY	COUNTRY 	  AGE	  SALARY
+---------- -------------- ---------- ---------- ---------- ---------- ----------
+	 1 Ajaidev	  Ernakulam  cherai	India		   21	   20000
+
+e,select * from customer where salary like '_%50%_';
+	ID NAME 	  ADDRESS    CITY	COUNTRY 	  AGE	  SALARY
+---------- -------------- ---------- ---------- ---------- ---------- ----------
+	 2 Aravind	  kottayam   pala	India		   35	   75000
+
+f,select * from customer where city like 'ko_hi';
+	ID NAME 	  ADDRESS    CITY	COUNTRY 	  AGE	  SALARY
+---------- -------------- ---------- ---------- ---------- ---------- ----------
+	 3 Ebin Sunny	  Ernakulam  kochi	India		   34	   32300
+
+g,select * from customer where salary like '3__00';
+
+	ID NAME 	  ADDRESS    CITY	COUNTRY 	  AGE	  SALARY
+---------- -------------- ---------- ---------- ---------- ---------- ----------
+	 3 Ebin Sunny	  Ernakulam  kochi	India		   34	   32300
+	 5 Ajay Das M	  Palakad    vellinazhi India		   45	   34000
+
+h,select * from customer where name like '____d%';
+	ID NAME 	  ADDRESS    CITY	COUNTRY 	  AGE	  SALARY
+---------- -------------- ---------- ---------- ---------- ---------- ----------
+	 1 Ajaidev	  Ernakulam  cherai	India		   21	   20000
+
+i,select * from customer where name not like 'Ajaidev';
+
+
+	ID NAME 	  ADDRESS    CITY	COUNTRY 	  AGE	  SALARY
+---------- -------------- ---------- ---------- ---------- ---------- ----------
+	 2 Aravind	  kottayam   pala	India		   35	   75000
+	 3 Ebin Sunny	  Ernakulam  kochi	India		   34	   32300
+	 4 Manu 	  Kollam     varkala	India		   78	   99000
+	 5 Ajay Das M	  Palakad    vellinazhi India		   45	   34000
+
+
+                      

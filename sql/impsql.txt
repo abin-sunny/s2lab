@@ -1,0 +1,49 @@
+sqlplus sys as sysdba
+manager   (password)
+
+//creation
+create table student(id int primary key,
+                     name varchar(20) not null,
+                     batch varchar(20) not null);
+//insertion
+insert into student values(1,"Ajaidev","bca");
+
+// insert multiple rows
+insert into student values(&id,'&name','&batch');
+
+//selectview
+
+select * from student;
+select id,name from student;
+select * from student where id=1;
+
+//alter
+alter table student add(gender varchar(50));
+//rename table
+alter table student rename to student1;
+
+//rename column name
+alter table student
+rename column batch to Batches;
+
+//modify atrribute
+alter table student modify(gender varchar(5));
+
+// upadte
+update student set gender="male";
+
+update student set gender="female" where id=10;
+
+//creation table and views
+
+create view student2 as(select id,name from student);
+
+create table student3 as(select id,name from student);
+
+//to view structure of table
+describe student
+or
+desc student
+
+commit
+

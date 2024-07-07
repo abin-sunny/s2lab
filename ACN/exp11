@@ -1,0 +1,11 @@
+EXPEIMENT 11:
+Shell scripting: study bash syntax, variables, control
+constructs such as if, for, while, command line arguments
+passed to shell scripts. Study of startup scripts, login and
+logout scripts, familiarity with system. Scripts is expected
+
+echo $SHELL
+/usr/bin/zsh
+
+mkdir createdbyscript
+touch createdbyscript addfile

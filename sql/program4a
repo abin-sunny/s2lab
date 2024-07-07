@@ -1,0 +1,121 @@
+ create table category(c_id int primary key,c_name varchar(20),c_desc varchar(200));
+ 
+ create table product(p_id int primary key,p_name varchar(20),c_id int,price number(10,2),foreign key(c_id) references category(c_id));
+ 
+ a, natural join
+ insert into product values(&p_id,'&p_name',&c_id,&price);
+ insert into category values(&c_id,'&c_name','&c_desc');
+ alter table category modify(c_desc varchar(150));
+
+
+select * from product;
+
+      P_ID P_NAME		      C_ID	PRICE
+---------- -------------------- ---------- ----------
+	 1 chais			 1	   18
+	 2 chang			 1	   19
+	 3 anised syrup 		 2	   10
+	 
+	 
+	 //not this row
+	 4 colgate			 7	   20
+
+ 
+select * from category;
+
+      C_ID C_NAME		C_DESC
+---------- -------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------
+	 1 Bevarage		it is a mood changer
+	 2 medicine		it is for medical purpose .it should only given to those who have prescription
+	99 household		equipments used in homes
+
+ select p_id,p_name,c_name from product
+ natural join category;
+
+      P_ID P_NAME		C_NAME
+---------- -------------------- --------------------
+	 2 chang		Bevarage
+	 1 chais		Bevarage
+	 3 anised syrup 	medicine
+	 
+b,
+select p_id,p_name,c_name from product               
+inner join category on product.c_id=category.c_id;
+
+c
+select p_id,p_name,c_name from product natural right outer join category;
+
+      P_ID P_NAME		C_NAME
+---------- -------------------- --------------------
+	 1 chais		Bevarage
+	 2 chang		Bevarage
+	 3 anised syrup 	medicine
+				household
+d,select p_id,p_name,c_name from product natural left outer join category;
+
+e,select p_id,p_name,c_name from product natural left outer join category;
+
+      P_ID P_NAME		C_NAME
+---------- -------------------- --------------------
+	 2 chang		Bevarage
+	 1 chais		Bevarage
+	 3 anised syrup 	medicine
+
+test
+ALTER TABLE product
+DROP CONSTRAINT c_id;
+
+
+
+ select t_id,name,salary from temp1 natural right outer join temp2.c_id=temp1.c_id;
+ 
+  select temp1.t_id,temp1.name,temp2.salary from temp1 natural right outer join temp2 on temp2.c_id=temp1.c_id;
+  
+SELECT temp1.t_id, temp1.name, temp2.salary FROM temp1 NATURAL RIGHT OUTER JOIN temp2 ON temp2.c_id = temp1.c_id;
+
+
+
+
+
+
+
+select * from temp1;
+
+      T_ID NAME 		      C_ID
+---------- -------------------- ----------
+	 1 ajai 			 8
+	 2 abin 			 9
+	 3 ajay das			10
+	 4 ajith			89
+
+SQL> select * from temp2;
+
+      C_ID     SALARY
+---------- ----------
+	10	 2000
+	89	30000
+	 5     378675
+	56	75000
+
+select temp1.t_id,temp1.name,temp2.salary
+  2  from temp1
+  3  right outer join temp2 on temp2.c_id=temp1.c_id;
+
+      T_ID NAME 		    SALARY
+---------- -------------------- ----------
+	 3 ajay das		      2000
+	 4 ajith		     30000
+				    378675
+				     75000
+
+select temp1.t_id,temp1.name,temp2.salary from temp1 left outer join temp2 on temp2.c_id=temp1.c_id;
+
+      T_ID NAME 		    SALARY
+---------- -------------------- ----------
+	 3 ajay das		      2000
+	 4 ajith		     30000
+	 1 ajai
+	 2 abin
+select temp1.t_id,temp1.name,temp2.salary from temp1 full join temp2 on temp1.c_id=temp2.c_id;
+
+

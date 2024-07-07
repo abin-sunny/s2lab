@@ -1,0 +1,111 @@
+sqlplus sys as sysdba
+
+sho user
+USER is "SYS"
+
+select * from all_users;
+
+USERNAME			  USER_ID CREATED
+------------------------------ ---------- --------
+XS$NULL 		       2147483638 28-08-11
+APEX_040000			       47 28-08-11
+APEX_PUBLIC_USER		       45 28-08-11
+FLOWS_FILES			       44 28-08-11
+HR				       43 28-08-11
+MDSYS				       42 28-08-11
+ANONYMOUS			       35 28-08-11
+XDB				       34 28-08-11
+CTXSYS				       32 28-08-11
+OUTLN					9 28-08-11
+SYSTEM					5 28-08-11
+
+USERNAME			  USER_ID CREATED
+------------------------------ ---------- --------
+SYS					0 28-08-11
+
+*create user ajai identified by 1234;
+user created
+ *grant resource,connect to ajai;
+ Grant succeeded.
+*connect ajai/1234
+Connected.
+
+create table mca(id int primary key,name varchar(20));
+
+Table created.
+insert into mca values(&id,'&name');
+
+ select * from mca;
+
+	ID NAME
+---------- --------------------
+	 1 Ajai
+	 2 Ajay das
+	 
+connect sys as sysdba;
+Enter password: 
+Connected.
+grant dba to ajai with admin option;
+
+Grant succeeded.
+
+ grant dba to ajai;
+
+Grant succeeded.
+
+ connect ajai/1234
+Connected.
+
+SQL> create user merin identified by 1234;
+
+User created.
+ connect merin/1234;
+ERROR:
+ORA-01045: user MERIN lacks CREATE SESSION privilege; logon denied
+grant resource,connect to merin;
+
+grant resource,connect to merin;
+
+Grant succeeded.
+
+connect merin/1234
+Connected.
+
+select * from mca;
+select * from mca
+              *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+connect ajai/1234
+Connected.
+
+grant select,insert on mca to merin;  
+
+grant select,insert on mca to merin;
+
+Grant succeeded.
+
+connect merin/1234
+Connected.
+SQL> select * from ajai.mca;
+
+	ID NAME
+---------- --------------------
+	 1 Ajai
+	 2 Ajay das
+
+connect ajai/1234
+Connected.
+SQL> revoke select on mca from merin;
+
+Revoke succeeded.
+
+ revoke dba from ajai;
+
+Revoke succeeded.
+
+
+
+
+

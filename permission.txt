@@ -1,0 +1,10 @@
+chmos ugo filename
+0=nothing
+1=execute
+2=write
+3=w+x
+4=read
+5=r+x
+6=r+w
+7=r+w+x
+chmod 777 filename

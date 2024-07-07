@@ -1,0 +1,60 @@
+man - man command in Linux is used to display the user manual of any command that we can run on the terminal. It provides a detailed view of the command which includes NAME, SYNOPSIS, DESCRIPTION, OPTIONS, EXIT STATUS, RETURN VALUES, ERRORS, FILES, VERSIONS, EXAMPLES, AUTHORS
+
+ls - It is designed to list the names and features of files and directories.
+
+echo - The echo command in Linux is a built-in command that allows users to display lines of text or strings that are passed as arguments
+
+read - The Linux 'read' command is a built-in utility in Bash scripts that reads user input from the terminal, making scripts more interactive and dynamic.
+
+more - The more command reads files and displays the text one screen at a time. The command pauses after each screen and prints the word More at the bottom of the screen. If you then press a carriage return, the more command displays an additional line.
+
+less - The 'less' command reads the file one screen at a time, allowing you to navigate through it without loading the entire file into memory.
+
+cat - The cat command on Linux concatenates files together. It's often used to concatenate one file to nothing to print the single file's contents to the terminal.
+
+cd - The cd command in Linux stands for change directory. It is used to change the current directory of the terminal.
+
+mkdir - The mkdir command in Linux/Unix is a command-line utility that allows users to create new directories. mkdir stands for "make directory."
+
+pwd - The 'pwd' (print working directory) command in Linux is a built-in command that displays the full pathname of the current directory. It can be used with the simple syntax, pwd [optional_arguments] 
+
+find - The find command is one of the most useful Linux commands, especially when you're faced with the hundreds and thousands of files and folders on a modern computer. As its name implies, find helps you find things, and not just by filename.
+
+mv - The mv command moves files and directories from one directory to another or renames a file or directory. If you move a file or directory to a new directory, it retains the base file name. When you move a file, all links to other files remain intact, except when you move it to a different file system.
+
+cp - Use the cp command to create a copy of the contents of the file or directory specified by the SourceFile or SourceDirectory parameters into the file or directory specified by the TargetFile or TargetDirectory parameters.
+
+rm - Linux rm | Linux Delete File. The 'rm' means remove. This command is used to remove a file.rm <filename>
+
+tar - 'tar' is a command in Linux used for creating, viewing, and extracting files from archives.
+
+wc - The Linux wc command calculates a file's word, line, character, or byte count. Far from just being a utility for word processing, wc is a useful tool for a variety of system tasks.
+
+cut- The cut command is a command-line utility that allows you to cut out sections of a specified file or piped data and print the result to standard output.
+
+paste - The 'paste' command in Linux is used to merge lines of files. You can use it to combine the contents of two files into a single file with the syntax, paste [options] file1 file2 . Here's a simple example: paste file1.txt file2.txt.
+
+head - The Linux head command prints the first lines of one or more files (or piped data) to standard output. By default, it shows the first 10 lines.
+
+tail - The Linux tail command is a command-line utility that prints data from the end of a specified file or files to standard output. The utility provides an easy way to quickly see file updates in real time, as new data is usually added to the end of a file.
+
+grep - Grep command in Unix/Linux is the short form of 'global search for the regular expression'. The grep command is a filter that is used to search for lines matching a specified pattern and print the matching lines to standard output. The pattern is specified as a regular expression.
+
+expr - The expr command in Unix evaluates a given expression and displays its corresponding output. It is used for: Basic operations like addition, subtraction, multiplication, division, and modulus on integers. Evaluating regular expressions, string operations like substring, length of strings etc.
+
+chmod - The chmod, or change mode, command allows an administrator to set or modify a file's permissions. Every UNIX/Linux file has an owner user and an owner group attached to it, and every file has permissions associated with it. The permissions are as follows: read, write, or execute.
+
+chown - The chown command changes the owner of the file or directory specified by the File or Directory parameter to the user specified by the Owner parameter. The value of the Owner parameter can be a user name from the user database or a numeric user ID. Optionally, a group can also be specified.
+
+redirect - Linux input/output redirection commands redirect commands and scripts. This command allows you to specify input and output locations. You can read input from a file instead of typing it rather than displaying it on the screen. The output of multiple commands can also be filtered and modified using redirection commands. They provide a powerful and flexible way to control Linux data flows.
+
+piping - A pipe is a form of redirection in Linux used to connect the STDOUT of one command into the STDIN of a second command. It allows us to narrow the output of a string of commands until we have an easily digestible amount of data. The pipe character is the | symbol and is placed between any two commands.
+
+useradd - useradd is a command in Linux that is used to add user accounts to your system. It is just a symbolic link to adduser command in Linux and the difference between both of them is that useradd is a native binary compiled with the system whereas adduser is a Perl script that uses useradd binary in the background.
+
+usermod - usermod command or modify user is a command in Linux that is used to change the properties of a user in Linux through the command line. After creating a user we have to sometimes change their attributes like password or login directory etc
+
+userdel - The userdel command removes the user account identified by the login parameter. The command removes a user's attributes without removing the user's home directory by default. The user name must already exist. If the -r flag is specified, the userdel command also removes the user's home directory.
+
+passwd - The passwd command sets and changes passwords for users. Use this command to change your own password or another user's password. You can also use the passwd command to change the full name (gecos) associated with your login name and the shell you use as an interface to the operating system.
+

@@ -1,0 +1,45 @@
+ create table mca(id int primary key,name varchar(20));
+
+Table created.
+insert into mca values(&id,'&name');
+
+ select * from mca;
+
+	ID NAME
+---------- --------------------
+	 1 Ajaidev s
+	 2 Ajay das M
+	 3 Abin sunny
+	 4 Abin jose
+	 5 Ajith mani
+
+savepoint check1;
+select * from mca;
+
+	ID NAME
+---------- --------------------
+	 1 Ajaidev s
+	 2 Ajay das M
+	 3 Abin sunny
+	 4 Abin jose
+	 5 Ajith mani
+	 6 Akhil
+	 7 Alfiya
+	 8 Amala P chungath
+
+rollback to check1;
+select * from mca;
+
+	ID NAME
+---------- --------------------
+	 1 Ajaidev s
+	 2 Ajay das M
+	 3 Abin sunny
+	 4 Abin jose
+	 5 Ajith mani
+commit;
+
+Commit complete.
+
+
+

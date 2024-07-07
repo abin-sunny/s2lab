@@ -1,0 +1,93 @@
+a,create table employee(id int primary key,name varchar(20) not null,department varchar(20) not null,salary number(10,2),city varchar(12));
+
+desc employee
+
+ Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID					   NOT NULL NUMBER(38)
+ NAME					   NOT NULL VARCHAR2(20)
+ DEPARTMENT				   NOT NULL VARCHAR2(20)
+ SALARY 					    NUMBER(10,2)
+ CITY						    VARCHAR2(12)
+
+b,insert into employee values(&id,'&name','&department',&salary,'&city');
+c,select * from employee;
+	ID NAME 		DEPARTMENT		 SALARY CITY
+---------- -------------------- -------------------- ---------- -----------
+	 1 Ajaidev.s		sales			  15000 perumbavoor
+	 2 Ajaydas		manager 		  20000 palakad
+	 3 Abin sunny		Transport		  30000 Kureshi
+	 4 Ajith mani		Technical		  25000 pala
+	 5 Akhil rockie 	sales			  17000 perumbavoor
+
+d,select * from employee where department='sales';
+
+	ID NAME 		DEPARTMENT		 SALARY CITY
+---------- -------------------- -------------------- ---------- -----------
+	 1 Ajaidev.s		sales			  15000 perumbavoor
+	 5 Akhil rockie 	sales			  17000 perumbavoor
+	 
+e,select * from employee where id=1;
+
+	ID NAME 		DEPARTMENT		 SALARY CITY
+---------- -------------------- -------------------- ---------- -----------
+	 1 Ajaidev.s		sales			  15000 perumbavoor
+
+f,select * from employee where salary between 20000 and 35000;
+
+	ID NAME 		DEPARTMENT		 SALARY CITY
+---------- -------------------- -------------------- ---------- -----------
+	 2 Ajaydas		manager 		  20000 palakad
+	 3 Abin sunny		Transport		  30000 Kureshi
+	 4 Ajith mani		Technical		  25000 pala
+
+g,select * from employee order by name ;
+
+	ID NAME 		DEPARTMENT		 SALARY CITY
+---------- -------------------- -------------------- ---------- -----------
+	 3 Abin sunny		Transport		  30000 Kureshi
+	 1 Ajaidev.s		sales			  15000 perumbavoor
+	 2 Ajaydas		manager 		  20000 palakad
+	 4 Ajith mani		Technical		  25000 pala
+	 5 Akhil rockie 	sales			  17000 perumbavoor
+
+h,update employee set salary=salary+250;
+
+ select * from employee;
+
+	ID NAME 		DEPARTMENT		 SALARY CITY
+---------- -------------------- -------------------- ---------- -----------
+	 1 Ajaidev.s		sales			  15250 perumbavoor
+	 2 Ajaydas		manager 		  20250 palakad
+	 3 Abin sunny		Transport		  30250 Kureshi
+	 4 Ajith mani		Technical		  25250 pala
+	 5 Akhil rockie 	sales			  17250 perumbavoor
+
+i,alter table employee add(join_date date DEFAULT '12-FEB-2022');
+
+ select * from employee;
+
+	ID NAME 		DEPARTMENT		 SALARY CITY
+---------- -------------------- -------------------- ---------- -----------
+JOIN_DAT
+--------
+	 1 Ajaidev.s		sales			  15250 perumbavoor
+12-02-22
+
+	 2 Ajaydas		manager 		  20250 palakad
+12-02-22
+
+	 3 Abin sunny		Transport		  30250 Kureshi
+12-02-22
+
+
+	ID NAME 		DEPARTMENT		 SALARY CITY
+---------- -------------------- -------------------- ---------- -----------
+JOIN_DAT
+--------
+	 4 Ajith mani		Technical		  25250 pala
+12-02-22
+
+	 5 Akhil rockie 	sales			  17250 perumbavoor
+12-02-22
+
