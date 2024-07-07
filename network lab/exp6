@@ -1,0 +1,32 @@
+Setting up a dual-boot system with Windows and Ubuntu allows you to enjoy the best of both worlds. Here’s a step-by-step guide to help you achieve this:
+
+Prerequisites:
+A computer preinstalled with Windows 10.
+A partitioned hard drive (we’ll create a separate partition for Ubuntu).
+A BIOS in UEFI mode (Unified Extensible Firmware Interface).
+An empty USB drive (at least 4GB) for creating a bootable disk.
+An internet connection to download the Ubuntu ISO image and Rufus (a bootable drive creation tool).
+Check BIOS Mode:
+Confirm that your PC BIOS is in UEFI mode. Search for “system information” and check the BIOS mode. If it’s not in UEFI mode, the two operating systems won’t see each other.
+Partition Your Hard Drive for Ubuntu:
+Right-click on the Start button and select “Disk Management”.
+Right-click on your C drive and choose “Shrink volume”.
+Allocate at least 20GB for Ubuntu (you can assign more if needed).
+Optionally, assign a letter to the new volume using “New Simple Volume”.
+Congratulations! You’ve successfully partitioned your hard drive1.
+Create a Bootable Ubuntu USB Drive:
+Download the Ubuntu ISO image from the official website.
+Use a tool like Rufus to create a bootable USB drive with the ISO image.
+Install Ubuntu Alongside Windows:
+Plug in the bootable USB drive and restart your computer.
+Boot from the USB stick.
+Choose “Try Ubuntu without installing” to load a live session.
+Open GParted (if not installed, use the terminal command sudo apt-get install gparted).
+Create at least two partitions:
+Ext4 partition: Set the mount point to “/” (root) for Ubuntu.
+Swap partition: Used as virtual memory and for hibernation.
+Follow the installation wizard to install Ubuntu alongside Windows.
+Dual Boot Menu:
+After installation, reboot your PC.
+You’ll see a boot menu where you can select either Windows or Ubuntu.
+Remember to back up your files before proceeding, as installing an OS involves some risk. Enjoy your dual-boot setup! 🚀

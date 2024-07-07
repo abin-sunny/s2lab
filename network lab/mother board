@@ -1,0 +1,67 @@
+NETWORKING & SYSTEM ADMINISTRATION LAB
+
+SET 1 
+Experiment 1:  
+Different components of computer
+a) Motherboard and different components
+a) Processor, ram slots, power slots, ports, cmos, ..............
+b) Hard disk
+c) SMPS and its different coloured wires.
+d) RAM
+e) ROM
+f) Printer
+g) UPS
+h) Different cards
+i) BIOS
+.............................
+
+................................
+
+....................................
+
+https://www.techtarget.com/whatis/definition/motherboard
+Certainly! Let’s explore the key components of a motherboard:
+
+CPU (Central Processing Unit) Chip:
+The CPU, also known as the central processor, executes instructions that make up computer programs. It handles logic, arithmetic, control, and input/output operations specified by program instructions1.
+RAM (Random Access Memory) Slots:
+RAM is a type of computer memory that can be read and written. It allows data to be accessed quickly, regardless of its physical location in memory. RAM slots hold RAM modules, enhancing system performance and multitasking capabilities1.
+Southbridge/Northbridge:
+These are two chips in the core logic chipset on the motherboard.
+The southbridge manages slower capabilities (such as USB, SATA, and audio interfaces).
+The northbridge handles faster components (like RAM and graphics cards)1.
+BIOS (Basic Input/Output System):
+BIOS provides low-level software that initializes hardware during system startup.
+It manages communication between the operating system and hardware components1.
+I/O Ports:
+These connectors allow external devices (such as USB drives, keyboards, and monitors) to connect to the motherboard.
+USB (Universal Serial Bus) Ports:
+USB ports enable connections to various peripherals, including external drives, printers, and input devices1.
+CPU Slot:
+The slot where the CPU is installed on the motherboard.
+PCI (Peripheral Component Interconnect) Slots:
+These slots accommodate expansion cards like network adapters, sound cards, and graphics cards1.
+AGP (Accelerated Graphics Port) Slot:
+An older slot specifically for graphics cards (now largely replaced by PCI Express slots)1.
+ISA (Industry Standard Architecture) Slot:
+An older slot for expansion cards (rarely used in modern systems)1.
+Parallel Port:
+Used for connecting printers and other parallel devices (less common today)1.
+FDC (Floppy-Disk Controller):
+Manages floppy disk drives (obsolete in most systems)1.
+IDE (Integrated Drive Electronics) Controller:
+Interfaces with hard drives and optical drives (replaced by SATA in modern systems)1.
+CMOS (Complementary Metal-Oxide-Semiconductor) Battery:
+Powers the CMOS chip, which stores BIOS settings and system configuration1.
+Power Supply Connector:
+Connects the motherboard to the power supply unit (PSU)1.
+Mouse and Keyboard Ports:
+Connect input devices to the motherboard.
+DIP (Dual In-Line Package) Switch:
+Used for hardware configuration (less common in modern motherboards)1.
+Jumper:
+Configurable pins that set hardware parameters (also less common now)1.
+Heat Sink (Cooling System):
+Keeps components (like the CPU) cool by dissipating heat.
+Clock Generator:
+Generates clock signals for synchronizing system components1.

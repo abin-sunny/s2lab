@@ -1,0 +1,68 @@
+vim
+text$
+>>>>>>>>>>>
+1,vim or vi
+
+vim file1.txt
+
+menu support by commands
+
+2 modes
+   insert mode
+   command mode/esc mode
+i to go to insert mode(defualt esc mode)
+esc to go to esc mode
+then :  (and command)
+ww write
+q quite
+ls
+vim file1.txt
+
+
+i to insert
+esc to escape 
+wq to write and quite
+ww filename.txt to name file
+
+
+extraaaaaas
+.............................................................................
+
+code.py
+
+vim code.py
+
+shwo line number
+:set number
+
+:set nonumber
+
+:set number
+ to go to 100 line
+ :100
+ :30
+ 
+ 
+ to search
+ go to esc mode and
+ /screen
+ n for next
+ shift+n previous
+
+
+dd to dlt
+4 dd to dlt 4 lines
+
+undo and redo
+
+esc mode and u undo
+cntrl +r
+
+$ to move end line
+^ move start 
+w to worrd word jump
+to quite without saving
+:q:
+
+
+
